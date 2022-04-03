@@ -76,9 +76,9 @@ public class ElementulLipsa {
     public static void main(String[] args) throws FileNotFoundException {
 
         try {
-            BufferedReader br = new BufferedReader(new FileReader("D:\\Facultate_2021_2022\\Palg\\Laborator1\\ElementLipsa\\in.txt"));
+            BufferedReader br = new BufferedReader(new FileReader("D:\\###Facultate\\Palg\\Lab_1\\src\\ro\\usv\\ElementulLipsa_in.txt"));
 
-//            in.txt
+//            ElementulLipsa_in.txt
 //            ---------
 //            6
 //            5 1 6 3 2
