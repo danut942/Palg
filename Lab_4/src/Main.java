@@ -62,18 +62,18 @@ public class Main {
     }
 
     // Cautare binara - Recursiv
-    public static int CautaBinar_Recursiv(int [] a,int left,int right,int x){
-        if(left>right){
+    public static int CautaBinar_Recursiv(int[] a, int left, int right, int x) {
+        if (left > right) {
             return -1;
         }
-        int mid = (left + right)/2;
-        if(a[mid] == x){
+        int mid = (left + right) / 2;
+        if (a[mid] == x) {
             return mid;
         }
-        if(a[mid] < x){
-            return CautaBinar_Recursiv(a,mid + 1,right,x);
+        if (a[mid] < x) {
+            return CautaBinar_Recursiv(a, mid + 1, right, x);
         } else {
-            return CautaBinar_Recursiv(a,left,mid - 1,x);
+            return CautaBinar_Recursiv(a, left, mid - 1, x);
         }
     }
 
@@ -87,30 +87,30 @@ public class Main {
                 }
             }
         }
-
+        return -1; 
     }
-    // Elementul suma 2
-    public static int Suma_2 (int [] a, int n, int x){
-        for(int i=0;i<=n-1;i++){
-            int j = CautareBinara(a,0,n-1,x-a[i]);
-            if(j !=-1 && j !=i){
-                System.out.println(a[i]+ " "+ a[j] );
-                break;
-            }
-        }
-    }
+//    // Elementul suma 2
+//    public static int Suma_2 (int [] a, int n, int x){
+//        for(int i=0;i<=n-1;i++){
+//            int j = CautareBinara(a,0,n-1,x-a[i]);
+//            if(j !=-1 && j !=i){
+//                System.out.println(a[i]+ " "+ a[j] );
+//                break;
+//            }
+//        }
+//    }
 
     public static void main(String[] args) {
 
         try {
-            BufferedReader br = new BufferedReader(new FileReader("D:\\###Facultate\\Palg\\Lab_4\\src\\CautareBinara_in.txt"));
+            BufferedReader br = new BufferedReader(new FileReader("D:\\###Facultate\\Palg\\Lab_4\\src\\in.txt"));
 
             int size = Integer.parseInt(br.readLine());
             int[] nums = new int[size];
             String[] strNums = br.readLine().split("\\s+");
 
             for (int i = 0; i < strNums.length; i++) {
-                System.out.println("nums["+i+"]" + " = " + Integer.parseInt(strNums[i]));
+                System.out.println("nums[" + i + "]" + " = " + Integer.parseInt(strNums[i]));
                 nums[i] = Integer.parseInt(strNums[i]);
             }
             br.close();
